@@ -20,10 +20,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btnSendMessage = this.findViewById(R.id.btnSendMessage);
-
+        Button btnAbrufen = this.findViewById(R.id.btnAbrufen);
         EditText edtMessage = this.findViewById(R.id.edtMessage);
-
+        Button btnKarte = this.findViewById(R.id.btnKarte);
         TextView txtMessage = this.findViewById(R.id.txtMessage);
+
+        btnKarte.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         btnSendMessage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +40,15 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this, uebung3.class);
                 intent.putExtra("MESSAGE", message);
+
+                startActivity(intent);
+            }
+        });
+
+        btnAbrufen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DepartureActivity.class);
 
                 startActivity(intent);
             }
@@ -65,4 +81,12 @@ public class MainActivity extends AppCompatActivity {
     this.startActivity(browserChooser);
 
     }
+
+    public void openDepartures(View view)
+    {
+        Intent intent = new Intent(this, DepartureActivity.class);
+        this.startActivity(intent);
+    }
+
+
 }

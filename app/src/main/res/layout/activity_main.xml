@@ -87,17 +87,26 @@
         android:onClick="openUrl"
         />
 
-
-
-
-
     <TextView
         android:id="@+id/txtMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAbrufen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KVV Info abrufen"
+        android:background="#E3655D"
+        />
 
-
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnKarte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Karte"
+        android:background="#E3655D"
+        />
 
 
 
